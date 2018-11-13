@@ -26,7 +26,7 @@ class InventoryList extends Component {
               <CSSTransition key={_id} timeout={500} classNames="fade">
                 <ListGroupItem>
                   <Button
-                    className="remove-btn"
+                    className="remove-btn float-right"
                     color="danger"
                     onClick={this.onDeleteClick.bind(this, _id)}
                   >
