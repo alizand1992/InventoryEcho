@@ -1,6 +1,5 @@
 import axios from "axios";
 
-
 export const createUser = (params) => (dispatch) => {
   axios.post("/api/users/create/", {
     params: params,
@@ -33,4 +32,3 @@ export const login = (params) => (dispatch) => {
     })
   })
 };
-
