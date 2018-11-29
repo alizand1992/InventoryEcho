@@ -1,3 +1,4 @@
+import {CREATE_USER, DELETE_USER, LOGIN} from "./types";
 import axios from "axios";
 
 export const createUser = (params) => (dispatch) => {
@@ -5,7 +6,7 @@ export const createUser = (params) => (dispatch) => {
     params: params,
   }).then(res => {
     dispatch({
-      type: "CREATE_USER",
+      type: CREATE_USER,
       payload: res.data,
     });
   }).catch(err => console.log(err));
@@ -16,18 +17,18 @@ export const deleteUser = (username) => (dispatch) => {
     params: username,
   }).then(res => {
     dispatch({
-      type: "DELETE_USER",
+      type: DELETE_USER,
       payload: res.data,
     });
   }).catch(err => console.log(err));
 };
 
 export const login = (params) => (dispatch) => {
-  axios.login("/api/users/login/", {
+  axios.post("/api/users/login/", {
     params: params,
   }).then(res => {
     dispatch({
-      type: "LOGIN",
+      type: LOGIN,
       payload: res.data,
     })
   })

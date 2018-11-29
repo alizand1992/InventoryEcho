@@ -11,3 +11,8 @@ export const GET_SOLD_ITEMS = "GET_SOLD_ITEMS";
 export const ADD_SOLD_ITEM = "ADD_SOLD_ITEM";
 export const DELETE_SOLD_ITEM = "DELETE_SOLD_ITEM";
 export const DELETE_ALL_SOLD_ITEMS = "DELETE_ALL_SOLD_ITEMS";
+
+//User Types
+export const LOGIN = "LOGIN";
+export const CREATE_USER = "CREATE_USER";
+export const DELETE_USER = "DELETE_USER";

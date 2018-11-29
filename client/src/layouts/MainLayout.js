@@ -8,7 +8,8 @@ import Nav from "./Navigation";
 import HomeView from "../views/HomeView";
 import InventoryView from "../views/InventoryView";
 import SaleView from "../views/SaleView";
-import ItemSearch from "../components/ItemSearch"
+import ItemSearch from "../components/ItemSearch";
+import UserView from "../views/UserView";
 
 class MainLayout extends Component {
   render() {
@@ -20,6 +21,7 @@ class MainLayout extends Component {
           <Route path="/inventory" component={InventoryView} />
           <Route path="/sale" component={SaleView} />
           <Route path="/search" component={ItemSearch} />
+          <Route path="/user" component={UserView} />
         </Switch>
       </div>
     );
