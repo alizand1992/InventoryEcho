@@ -1,20 +1,41 @@
-import {CREATE_USER, DELETE_USER, LOGIN} from "../actions/types";
+import {
+  CREATE_USER,
+  DELETE_USER,
+  LOGIN,
+  LOGOUT,
+} from "../actions/types";
 
 const initialState = {
   query: null,
   loading: false,
 };
 
-// CHANGE THESE TO CONSTANTS
-
 export default function (state = initialState, action) {
   switch (action.type) {
-  case CREATE_USER:
-    break;
-  case DELETE_USER:
-    break;
-  case LOGIN:
-    break;
+    case CREATE_USER:
+      return {
+        ...state,
+        user: action.payload,
+        loading: false,
+      };
+    case DELETE_USER:
+    return {
+      ...state,
+      user: null,
+      loading: false,
+    };
+    case LOGIN:
+    return {
+      ...state,
+      user: action.payload,
+      loading: false,
+    };
+    case LOGOUT:
+      return {
+        ...state,
+        user: null,
+        loading: false,
+      };
   default:
     return {
       ...state,
