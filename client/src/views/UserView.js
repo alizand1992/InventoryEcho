@@ -49,13 +49,12 @@ class UserView extends Component {
                 <CardBody>
                   <FormGroup>
                     {userFields.map((user) =>
-                        <React.Fragment>
-                          <FormGroup>
-                              <Input key={user.name} name={user.name} type={user.type} placeholder={user.placeholder} onChange={this.onChange} />
-                          </FormGroup>
-                        </React.Fragment>
-                      )
-                    }
+                      <React.Fragment>
+                        <FormGroup>
+                          <Input key={user.name} name={user.name} type={user.type} placeholder={user.placeholder} onChange={this.onChange} />
+                        </FormGroup>
+                      </React.Fragment>
+                    )}
                   </FormGroup>
                   <FormGroup className="text-right">
                       <Button className="btn btn-primary">Login</Button>
@@ -73,10 +72,10 @@ class UserView extends Component {
 
 //at bottom, replace export default with
 const mapStateToProps = (state) => ({
-    user: state.user
+  user: state.user
 });
 
 export default connect(
-    mapStateToProps,
-    { login }
+  mapStateToProps,
+  { login }
 )(UserView);

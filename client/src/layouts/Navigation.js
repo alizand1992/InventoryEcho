@@ -44,11 +44,10 @@ class Navigation extends Component {
             </Nav>
 
             <Nav className="ml-auto" nav>
-              <Dropdown
-                navbar
-                isOpen={this.state.dropdownOpen}
-                toggle={this.toggleDropdown}
-              >
+              <NavItem>
+                <NavLink href="user">Login</NavLink>
+              </NavItem>
+              <Dropdown navbar isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown}>
                 <DropdownToggle navbar caret>
                   GitHub
                 </DropdownToggle>

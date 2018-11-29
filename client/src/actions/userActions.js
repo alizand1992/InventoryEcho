@@ -33,3 +33,9 @@ export const login = (params) => (dispatch) => {
     })
   })
 };
+
+export const logout = (params) => (dispatch) => {
+  axios.post("/api/users/logout/", {
+    params: params,
+  })
+};
