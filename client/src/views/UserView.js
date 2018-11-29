@@ -39,6 +39,13 @@ class UserView extends Component {
     return (
       <React.Fragment>
         <Container className="margined-container">
+
+          <Row>
+            <Col md={{size: 6, offset: 3}}>
+              <div className="alert alert-warning">
+              </div>
+            </Col>
+          </Row>
           <Row>
             <Col md={{size: 6, offset: 3}}>
               <Form onSubmit={this.onSubmit}>
