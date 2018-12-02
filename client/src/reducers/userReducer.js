@@ -6,6 +6,7 @@ import {
 } from "../actions/types";
 
 const initialState = {
+  user: null,
   query: null,
   loading: false,
 };

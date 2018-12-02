@@ -22,7 +22,7 @@ class MainLayout extends Component {
           <Route path="/" exact component={HomeView} />
           <Route path="/user/register" component={RegisterUserView} />
           <Route path="/user" component={UserView} />
-          <PrivateRoute path="/inventory" component={InventoryView} />
+          <PrivateRoute path="/inventory" component={InventoryView} user={this.props.user}/>
           <PrivateRoute path="/sale" component={SaleView} />
           <Route path="/search" component={ItemSearch} />
         </Switch>
