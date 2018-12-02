@@ -1,10 +1,8 @@
 import {CREATE_USER, DELETE_USER, LOGIN} from "./types";
 import axios from "axios";
 
-export const createUser = (params) => (dispatch) => {
-  axios.post("/api/users/create/", {
-    params: params,
-  }).then(res => {
+export const createUser = (user) => (dispatch) => {
+  axios.post("/api/users/create/", user).then(res => {
     dispatch({
       type: CREATE_USER,
       payload: res.data,
