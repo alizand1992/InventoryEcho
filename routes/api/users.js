@@ -14,6 +14,7 @@ router.post("/logout/", (req, res) => {
 });
 
 router.post("/create/", (req, res) => {
+  console.log(req.body);
   User.create(req.body);
 });
 
