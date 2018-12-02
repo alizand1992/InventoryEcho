@@ -64,4 +64,8 @@ UserSchema.pre('save', function saveHook(next) {
   })
 });
 
+UserSchema.methods.isLoggedIn = () => {
+  return this.id ? true : false;
+};
+
 module.exports = User = mongoose.model("User", UserSchema);

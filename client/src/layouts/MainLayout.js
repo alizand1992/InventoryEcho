@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
+import PrivateRoute from "../components/PrivateRoute";
 
 // Nav
 import Nav from "./Navigation";
@@ -19,11 +20,11 @@ class MainLayout extends Component {
         <Nav />
         <Switch>
           <Route path="/" exact component={HomeView} />
-          <Route path="/inventory" component={InventoryView} />
-          <Route path="/sale" component={SaleView} />
-          <Route path="/search" component={ItemSearch} />
           <Route path="/user/register" component={RegisterUserView} />
           <Route path="/user" component={UserView} />
+          <PrivateRoute path="/inventory" component={InventoryView} />
+          <PrivateRoute path="/sale" component={SaleView} />
+          <Route path="/search" component={ItemSearch} />
         </Switch>
       </div>
     );
