@@ -63,7 +63,7 @@ class UserView extends Component {
                     )}
                   </FormGroup>
                   <FormGroup>
-                    <a href="user/register"><span className="text-muted" style={{fontSize: 0.95 + "em"}}>Not a user? Register!</span></a>
+                    <a href="/user/register"><span className="text-muted" style={{fontSize: 0.95 + "em"}}>Not a user? Register!</span></a>
                   </FormGroup>
                   <FormGroup className="text-right">
                       <Button className="btn btn-primary">Login</Button>

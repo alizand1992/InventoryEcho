@@ -21,10 +21,8 @@ export const deleteUser = (username) => (dispatch) => {
   }).catch(err => console.log(err));
 };
 
-export const login = (params) => (dispatch) => {
-  axios.post("/api/users/login/", {
-    params: params,
-  }).then(res => {
+export const login = (user) => (dispatch) => {
+  axios.post("/api/users/login/", user).then(res => {
     dispatch({
       type: LOGIN,
       payload: res.data,

@@ -56,7 +56,7 @@ class RegisterUserView extends Component {
                     {userFields.map((user) =>
                       <React.Fragment>
                         <FormGroup>
-                          <Input key={user.name} name={user.name} type={user.type} placeholder={user.placeholder}/>
+                          <Input key={user.name} name={user.name} type={user.type} placeholder={user.placeholder} onChange={this.onChange} />
                         </FormGroup>
                       </React.Fragment>
                     )}
